@@ -1,0 +1,56 @@
+body {
+    max-width: 500px;
+    min-height: 400px;
+    color: #1e4666;
+    text-align: center;
+    border: 2px solid #1e4666;
+    border-radius: 3px;
+}
+
+.task-name {
+    max-width: 100%;
+    border: 2px solid #b6d8f4;
+    border-radius: 3px;
+}
+
+.todo-task_done {
+    color: #818787;
+    text-decoration: line-through;
+}
+
+.todo-task-list {
+    list-style: none;
+    text-align: start;
+}
+
+.todo-button {
+    border: 2px solid #b6d8f4;
+    border-radius: 3px;
+    background-color: #03a9f412;
+    cursor: pointer;
+}
+
+.todo-button:active,
+.todo-button:hover,
+.todo-button:focus {
+    color: #dbeaf6;
+    border-color: #1e4666;
+    background-color: #1e4666;
+}
+
+.todo-task__delete {
+    height: 16px;
+    width: 16px;
+    background-image: url(img/cross_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid #1e4666;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.todo-task__delete:active,
+.todo-task__delete:hover,
+.todo-task__delete:focus {
+    border-color: #e15b64;
+}
