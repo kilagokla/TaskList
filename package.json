@@ -1,16 +1,21 @@
 {
-  "name": "todo-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
-  "scripts": {
-    "start": "live-server",
-    "start-server": "json-server --no-cors --watch db.json"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "json-server": "^0.16.1",
-    "live-server": "^1.2.1"
-  }
+    "name": "todo-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+        "webpack": "webpack-cli",
+        "start": "live-server",
+        "start-server": "json-server --no-cors --watch db.json",
+        "build": "npm run webpack -- --config webpack.config.js",
+        "build:watch": "npm run build -- --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "json-server": "^0.16.1",
+        "live-server": "^1.2.1",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    }
 }

@@ -153,6 +153,7 @@ class Store extends AbstractStore {
     }
 
     get(taskId) {
+        debugger
         const task = this._list.find(d => d.id === taskId);
 
         if (!task) {
@@ -165,6 +166,7 @@ class Store extends AbstractStore {
     }
 
     add(task) {
+        debugger
         this._list.push(task);
         return Promise.resolve(task.clone());
     }
@@ -479,12 +481,12 @@ class RenderApplication extends AbstractRender {
         this._listRef.appendChild(wrapper);
 
         button.addEventListener('click', (event) => {
-            const id = event.currentTarget.parentNode.id;
+            const id = Number(event.currentTarget.parentNode.id);
             this._deleteTaskFunction(id);
         })
 
         checkbox.addEventListener('change', (event) => {
-            const id = event.currentTarget.parentNode.id;
+            const id = Number(event.currentTarget.parentNode.id);
             this._toggleTaskFunction(id);
         })
     }
