@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "outDir": "build",
+      "sourceMap": true
+    },
+    "exclude": [
+      "node_modules",
+      "./build",
+      "./dist"
+    ]
+  }

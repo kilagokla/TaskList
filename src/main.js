@@ -1,2 +1,7 @@
-import { Store } from './store';
-console.log(new Store());
+import { TaskApplication } from './application';
+import Test from './test';
+
+const app = new TaskApplication();
+app.start();
+
+const test = new Test();

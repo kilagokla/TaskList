@@ -10,13 +10,8 @@ class TaskGettingError extends Error {
     }
 }
 
-class StoreUpdatingError extends Error {
-    constructor(message) {
-        super(`The updation process doesn't need be made: ${message}`);
-    }
-}
 
-class DeleteTaskFromStoreError extends Error {
+class TaskDeletingFromStoreError extends Error {
     constructor(message) {
         super(`The deletion process can't be made: ${message}`);
     }
@@ -179,7 +174,7 @@ class Store extends AbstractStore {
                 await this.get(taskId);
 
             } catch (error) {
-                return reject(new DeleteTaskFromStoreError(
+                return reject(new TaskDeletingFromStoreError(
                     error.message + `Task which needs to be deleted doesn't exist in the store, only tasks which are in the store can be deleted`
                 ));
             }
@@ -231,7 +226,7 @@ class StoreLS extends AbstractStore {
         try {
             (await this.getAll()).find(el => el.id !== taskId);
         } catch (error) {
-            return Promise.reject(new DeleteTaskFromStoreError(
+            return Promise.reject(new TaskDeletingFromStoreError(
                 error.message + `Task which needs to be deleted doesn't exist in the store, only tasks which are in the store can be deleted`
             ));
         }
