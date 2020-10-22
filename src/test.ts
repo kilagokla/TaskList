@@ -4,3 +4,5 @@ export class Test {
         console.log(number);
     }
 }
+
+new Test()
